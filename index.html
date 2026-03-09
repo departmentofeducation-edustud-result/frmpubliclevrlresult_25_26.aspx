@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Annual Result 2025-26</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:#ffffff;
+        }
+
+        .container{
+            width:420px;
+            margin:40px auto;
+            border:1px solid #b5b5b5;
+        }
+
+        .header{
+            text-align:center;
+            font-weight:bold;
+            padding:10px;
+            border-bottom:1px solid #b5b5b5;
+            font-size:16px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            font-size:14px;
+        }
+
+        td{
+            border:1px solid #c5c5c5;
+            padding:8px;
+        }
+
+        .left{
+            background:#e9e9e9;
+            width:45%;
+        }
+
+        .star{
+            color:red;
+            font-weight:bold;
+        }
+
+        input, select{
+            width:95%;
+            padding:5px;
+            border:1px solid #bbb;
+            border-radius:4px;
+        }
+
+        .captcha{
+            font-size:38px;
+            color:#1a32ff;
+            font-weight:bold;
+            letter-spacing:3px;
+            text-align:center;
+        }
+
+        .buttons{
+            text-align:center;
+            padding:12px;
+        }
+
+        button{
+            background:#3c78b4;
+            color:white;
+            border:none;
+            padding:8px 18px;
+            margin:5px;
+            border-radius:4px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#2f5f91;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        Directorate of Education, Govt. of NCT of Delhi<br>
+        Annual Result Academic Session 2025-26
+    </div>
+
+    <!-- Change action to the page/file that will show the result -->
+    <form action="result.html" method="get">
+
+        <table>
+
+            <tr>
+                <td class="left">Student Id <span class="star">*</span></td>
+                <td><input type="text" name="studentId" required></td>
+            </tr>
+
+            <tr>
+                <td class="left">Class<span class="star">*</span></td>
+                <td>
+                    <select name="class" required>
+                        <option value="">Select</option>
+                        <option>I</option>
+                        <option>II</option>
+                        <option>III</option>
+                        <option>IV</option>
+                        <option>V</option>
+                        <option>VI</option>
+                        <option>VII</option>
+                        <option>VIII</option>
+                        <option>IX</option>
+                        <option>XI</option>
+                        <option>XII</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="left">Section<span class="star">*</span></td>
+                <td>
+                    <select name="section" required>
+                        <option value="">Select</option>
+                        <script>
+                            for (let i = 65; i <= 90; i++) {
+                                document.write("<option>" + String.fromCharCode(i) + "</option>");
+                            }
+                        </script>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="left">DOB (dd/mm/yyyy) <span class="star">*</span></td>
+                <td><input type="text" name="dob" placeholder="dd/mm/yyyy" required></td>
+            </tr>
+
+            <tr>
+                <td class="left">Visual Code</td>
+                <td><div class="captcha">63ZLTB</div></td>
+            </tr>
+
+            <tr>
+                <td class="left">Type The Code Shown</td>
+                <td><input type="text" name="captcha" required></td>
+            </tr>
+
+        </table>
+
+        <div class="buttons">
+            <button type="submit">Submit</button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
